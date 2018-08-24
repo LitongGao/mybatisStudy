@@ -11,6 +11,13 @@ public interface UserMapper {
 
     //@Insert(value = "")
 
+    public User getUsers(Long id);
+
+    public int insertUser(User user);
+
+    public int deleteUser(Long id);
+
+    public int updateUser(User user);
 
 
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.litong.study.dao.UserMapper">
+    <select id="getUsers" resultType="user" parameterType="Long">
+        SELECT * from user where id = #{id}
+    </select>
+
+    <insert id="insertUser" parameterType="user">
+        INSERT into user(username,password,address) VALUE (#{username},#{password},#{address})
+    </insert>
+
+    <delete id="deleteUser" parameterType="Long">
+        delete from user where id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="user">
+        UPDATE user
+        set username=#{username,jdbcType=VARCHAR},
+         password=#{password},
+         address=#{address}
+        where id=#{id}
+    </update>
+</mapper>
