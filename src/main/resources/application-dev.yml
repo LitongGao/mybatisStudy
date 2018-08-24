@@ -1,0 +1,5 @@
+server:
+  port: 8098
+name: litong
+age: 16
+content: "name: ${name}, age:${age} [-dev env]"

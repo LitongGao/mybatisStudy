@@ -1,0 +1,5 @@
+server:
+  port: 8098
+name: litong
+age: 15
+content: "name: ${name}, age:${age} [-node env]"
