@@ -6,6 +6,7 @@
     <properties resource="db.properties" />
     <typeAliases>
         <typeAlias type="com.litong.study.model.User" alias="user" />
+        <package name="com.litong.study" />
     </typeAliases>
     <environments default="development">
         <environment id="development">

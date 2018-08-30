@@ -85,4 +85,21 @@ public class UserTest {
             }
         }
     }
+
+    @Test void deleteUser() {
+        SqlSession sqlSession = null;
+        try {
+            sqlSession = DBUtils.openSqlSession();
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            int i = userMapper.deleteUser(6l);
+            System.out.println("删除的userID是： "+ i);
+            sqlSession.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+        }
+    }
 }
